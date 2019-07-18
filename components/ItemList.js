@@ -21,7 +21,7 @@ updateState(){
 render(){
 return (
   <div>
-  {this.state.itemsList.map((v)=><h1>{v}</h1>)}
+  {this.state.itemsList.map((v)=><h1>{v.description}{v.amount}</h1>)}
 </div>)
 }
 }

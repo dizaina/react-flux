@@ -10,7 +10,7 @@ class WalletStore extends EventEmitter{
   }
 
   registerActions(action){
-    switch(action.type){
+    switch(action.actionType){
       case "addItem":this.addItem(action.payload)
                       break;
     }
