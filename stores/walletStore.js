@@ -5,6 +5,7 @@ const walletState=[];
 class WalletStore extends EventEmitter{
   constructor(){
     super();
+    this.addItem=this.addItem.bind(this);
     Dispatcher.register(this.registerActions.bind(this));
   }
 
@@ -19,7 +20,7 @@ class WalletStore extends EventEmitter{
     this.emit("change")
   }
   getAllItems(){
-    return _walletState;
+    return walletState;
   }
   addEventListener(callback){
     this.on("change",callback)
@@ -29,3 +30,4 @@ class WalletStore extends EventEmitter{
   }
 
 }
+export default new WalletStore();

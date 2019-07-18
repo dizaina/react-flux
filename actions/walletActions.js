@@ -1,5 +1,5 @@
 import Dispatcher from "../dispatcher";
-class WalletAction{
+class WalletActions{
   addItem(item){
     Dispatcher.dispatch({
       actionType:"addItem",
@@ -7,3 +7,4 @@ class WalletAction{
     })
   }
 }
+export default new WalletActions()

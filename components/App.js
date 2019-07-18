@@ -9,6 +9,7 @@ export default class App extends Component {
       <Fragment>
       <h1>Repo</h1>
       <AddNewItem/>
+      <ItemList/>
       </Fragment>
     );
   }

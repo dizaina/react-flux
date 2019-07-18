@@ -1,5 +1,5 @@
 import React,{Component} from "react";
-import walletActions from "../action/walletActions"
+import walletActions from "../actions/walletActions"
 
 class AddNewItem extends Component{
 constructor(props){
@@ -18,8 +18,8 @@ getFreshItems(){
   }
 }
 addItem(event){
-  event.preventDefault();
- // walletActions.addItem(this.state.item);
+event.preventDefault();
+ walletActions.addItem(this.state.item);
 }
 updateState(event){
   const field=event.target.name;
