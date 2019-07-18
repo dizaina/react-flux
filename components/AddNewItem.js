@@ -1,4 +1,6 @@
 import React,{Component} from "react";
+import walletActions from "../action/walletActions"
+
 class AddNewItem extends Component{
 constructor(props){
   super(props);
@@ -15,13 +17,9 @@ getFreshItems(){
     amount:""
   }
 }
-addItem(){
-  const itemList=[...this.state.itemList];
-  itemList.push({
-      description:this.state.item.description,
-      amount:this.state.item.amount
-  });
-  this.setState({itemList})
+addItem(event){
+  event.preventDefault();
+ // walletActions.addItem(this.state.item);
 }
 updateState(event){
   const field=event.target.name;
@@ -41,8 +39,7 @@ updateState(event){
 					</div>
 				    <button type="submit" className="btn btn-primary add" onClick={this.addItem}>Add</button>
 				</form>
-        {this.state.itemList.map((v)=><h1>{val}</h1>)}
 			</div>)
  }
 }
-export default AddNewItem;
+export default AddNewItem
